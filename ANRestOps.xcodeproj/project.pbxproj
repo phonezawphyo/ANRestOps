@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A328C031A6C074C0075F5BB /* ANRestOps.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A328C021A6C074C0075F5BB /* ANRestOps.h */; };
+		2A328C051A6C074C0075F5BB /* ANRestOps.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A328C041A6C074C0075F5BB /* ANRestOps.m */; };
+		2A328C0B1A6C074C0075F5BB /* libANRestOps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A328BFF1A6C074C0075F5BB /* libANRestOps.a */; };
+		2A328C1D1A6C07A70075F5BB /* ANRestOpsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A328C1A1A6C07A70075F5BB /* ANRestOpsClient.m */; };
+		2A328C1E1A6C07A70075F5BB /* ANRestOpsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A328C1C1A6C07A70075F5BB /* ANRestOpsResponse.m */; };
+		2A328C251A6C0FFB0075F5BB /* ANRestOpsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A328C241A6C0FFB0075F5BB /* ANRestOpsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2A328C0C1A6C074C0075F5BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A328BF71A6C074C0075F5BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A328BFE1A6C074C0075F5BB;
+			remoteInfo = ANRestOps;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2A328BFD1A6C074C0075F5BB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				2A328C031A6C074C0075F5BB /* ANRestOps.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2A328BFF1A6C074C0075F5BB /* libANRestOps.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libANRestOps.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A328C021A6C074C0075F5BB /* ANRestOps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ANRestOps.h; sourceTree = "<group>"; };
+		2A328C041A6C074C0075F5BB /* ANRestOps.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ANRestOps.m; sourceTree = "<group>"; };
+		2A328C0A1A6C074C0075F5BB /* ANRestOpsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ANRestOpsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A328C101A6C074C0075F5BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A328C191A6C07A70075F5BB /* ANRestOpsClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANRestOpsClient.h; sourceTree = "<group>"; };
+		2A328C1A1A6C07A70075F5BB /* ANRestOpsClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANRestOpsClient.m; sourceTree = "<group>"; };
+		2A328C1B1A6C07A70075F5BB /* ANRestOpsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANRestOpsResponse.h; sourceTree = "<group>"; };
+		2A328C1C1A6C07A70075F5BB /* ANRestOpsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANRestOpsResponse.m; sourceTree = "<group>"; };
+		2A328C241A6C0FFB0075F5BB /* ANRestOpsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANRestOpsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A328BFC1A6C074C0075F5BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A328C071A6C074C0075F5BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A328C0B1A6C074C0075F5BB /* libANRestOps.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A328BF61A6C074C0075F5BB = {
+			isa = PBXGroup;
+			children = (
+				2A328C011A6C074C0075F5BB /* ANRestOps */,
+				2A328C0E1A6C074C0075F5BB /* ANRestOpsTests */,
+				2A328C001A6C074C0075F5BB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2A328C001A6C074C0075F5BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A328BFF1A6C074C0075F5BB /* libANRestOps.a */,
+				2A328C0A1A6C074C0075F5BB /* ANRestOpsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A328C011A6C074C0075F5BB /* ANRestOps */ = {
+			isa = PBXGroup;
+			children = (
+				2A328C021A6C074C0075F5BB /* ANRestOps.h */,
+				2A328C041A6C074C0075F5BB /* ANRestOps.m */,
+				2A328C191A6C07A70075F5BB /* ANRestOpsClient.h */,
+				2A328C1A1A6C07A70075F5BB /* ANRestOpsClient.m */,
+				2A328C1B1A6C07A70075F5BB /* ANRestOpsResponse.h */,
+				2A328C1C1A6C07A70075F5BB /* ANRestOpsResponse.m */,
+			);
+			path = ANRestOps;
+			sourceTree = "<group>";
+		};
+		2A328C0E1A6C074C0075F5BB /* ANRestOpsTests */ = {
+			isa = PBXGroup;
+			children = (
+				2A328C0F1A6C074C0075F5BB /* Supporting Files */,
+				2A328C241A6C0FFB0075F5BB /* ANRestOpsTests.m */,
+			);
+			path = ANRestOpsTests;
+			sourceTree = "<group>";
+		};
+		2A328C0F1A6C074C0075F5BB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2A328C101A6C074C0075F5BB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2A328BFE1A6C074C0075F5BB /* ANRestOps */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A328C131A6C074C0075F5BB /* Build configuration list for PBXNativeTarget "ANRestOps" */;
+			buildPhases = (
+				2A328BFB1A6C074C0075F5BB /* Sources */,
+				2A328BFC1A6C074C0075F5BB /* Frameworks */,
+				2A328BFD1A6C074C0075F5BB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ANRestOps;
+			productName = ANRestOps;
+			productReference = 2A328BFF1A6C074C0075F5BB /* libANRestOps.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2A328C091A6C074C0075F5BB /* ANRestOpsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A328C161A6C074C0075F5BB /* Build configuration list for PBXNativeTarget "ANRestOpsTests" */;
+			buildPhases = (
+				2A328C061A6C074C0075F5BB /* Sources */,
+				2A328C071A6C074C0075F5BB /* Frameworks */,
+				2A328C081A6C074C0075F5BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A328C0D1A6C074C0075F5BB /* PBXTargetDependency */,
+			);
+			name = ANRestOpsTests;
+			productName = ANRestOpsTests;
+			productReference = 2A328C0A1A6C074C0075F5BB /* ANRestOpsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A328BF71A6C074C0075F5BB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Spectrum;
+				TargetAttributes = {
+					2A328BFE1A6C074C0075F5BB = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					2A328C091A6C074C0075F5BB = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 2A328BFA1A6C074C0075F5BB /* Build configuration list for PBXProject "ANRestOps" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2A328BF61A6C074C0075F5BB;
+			productRefGroup = 2A328C001A6C074C0075F5BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A328BFE1A6C074C0075F5BB /* ANRestOps */,
+				2A328C091A6C074C0075F5BB /* ANRestOpsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2A328C081A6C074C0075F5BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A328BFB1A6C074C0075F5BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A328C1D1A6C07A70075F5BB /* ANRestOpsClient.m in Sources */,
+				2A328C051A6C074C0075F5BB /* ANRestOps.m in Sources */,
+				2A328C1E1A6C07A70075F5BB /* ANRestOpsResponse.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A328C061A6C074C0075F5BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A328C251A6C0FFB0075F5BB /* ANRestOpsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2A328C0D1A6C074C0075F5BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A328BFE1A6C074C0075F5BB /* ANRestOps */;
+			targetProxy = 2A328C0C1A6C074C0075F5BB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2A328C111A6C074C0075F5BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2A328C121A6C074C0075F5BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2A328C141A6C074C0075F5BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2A328C151A6C074C0075F5BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2A328C171A6C074C0075F5BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ANRestOpsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2A328C181A6C074C0075F5BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ANRestOpsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A328BFA1A6C074C0075F5BB /* Build configuration list for PBXProject "ANRestOps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A328C111A6C074C0075F5BB /* Debug */,
+				2A328C121A6C074C0075F5BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A328C131A6C074C0075F5BB /* Build configuration list for PBXNativeTarget "ANRestOps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A328C141A6C074C0075F5BB /* Debug */,
+				2A328C151A6C074C0075F5BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A328C161A6C074C0075F5BB /* Build configuration list for PBXNativeTarget "ANRestOpsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A328C171A6C074C0075F5BB /* Debug */,
+				2A328C181A6C074C0075F5BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A328BF71A6C074C0075F5BB /* Project object */;
+}
