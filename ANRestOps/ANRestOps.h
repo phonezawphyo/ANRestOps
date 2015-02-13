@@ -13,17 +13,14 @@
 @interface ANRestOps : NSObject
 
 typedef void(^ANRestOpsBatchCompletionHandler)(NSDictionary *);
-typedef NS_ENUM(NSUInteger, ANRestOpsDataFormat)
+typedef enum
 {
     ANRestOpsJSONFormat,
     ANRestOpsFormFormat
-};
+} ANRestOpsDataFormat;
 
 + (ANRestOpsResponse *)get:(NSString *)urlString;
 + (ANRestOpsResponse *)get:(NSString *)urlString withParameters:(NSDictionary *)parameters;
-
-+ (NSDictionary *)batchGet:(NSArray *)urls;
-+ (NSDictionary *)batchGet:(NSArray *)urls parameters:(NSDictionary *)parameters;
 
 
 + (void)getInBackground:(NSString *)urlString
@@ -39,14 +36,6 @@ typedef NS_ENUM(NSUInteger, ANRestOpsDataFormat)
 + (ANRestOpsResponse *)post:(NSString *)urlString payload:(NSString *)payload;
 + (ANRestOpsResponse *)post:(NSString *)urlString payload:(NSDictionary *)payload payloadFormat:(ANRestOpsDataFormat)format;
 
-+ (NSDictionary *)batchPost:(NSArray *)urls
-                    payload:(NSString *)payload;
-
-+ (NSDictionary *)batchPost:(NSArray *)urls
-                    payload:(NSDictionary *)payload
-              payloadFormat:(ANRestOpsDataFormat)format;
-
-
 + (void)postInBackground:(NSString *)urlString
                  payload:(NSString *)payload
            beforeRequest:(void (^)(void))startingBlock
@@ -57,5 +46,33 @@ typedef NS_ENUM(NSUInteger, ANRestOpsDataFormat)
            payloadFormat:(ANRestOpsDataFormat)format
            beforeRequest:(void (^)(void))startingBlock
             onCompletion:(ANRestOpsCompletionHandler)completionBlock;
+
++ (ANRestOpsResponse *)put:(NSString *)urlString payload:(NSString *)payload;
++ (ANRestOpsResponse *)put:(NSString *)urlString payload:(NSDictionary *)payload payloadFormat:(ANRestOpsDataFormat)format;
+
++ (void)putInBackground:(NSString *)urlString
+                payload:(NSString *)payload
+          beforeRequest:(void (^)(void))startingBlock
+           onCompletion:(ANRestOpsCompletionHandler)completionBlock;
+
++ (void)putInBackground:(NSString *)urlString
+                payload:(NSDictionary *)payload
+          payloadFormat:(ANRestOpsDataFormat)format
+          beforeRequest:(void (^)(void))startingBlock
+           onCompletion:(ANRestOpsCompletionHandler)completionBlock;
+
++ (ANRestOpsResponse *)delete:(NSString *)urlString payload:(NSString *)payload;
++ (ANRestOpsResponse *)delete:(NSString *)urlString payload:(NSDictionary *)payload payloadFormat:(ANRestOpsDataFormat)format;
+
++ (void)deleteInBackground:(NSString *)urlString
+                   payload:(NSString *)payload
+             beforeRequest:(void (^)(void))startingBlock
+              onCompletion:(ANRestOpsCompletionHandler)completionBlock;
+
++ (void)deleteInBackground:(NSString *)urlString
+                   payload:(NSDictionary *)payload
+             payloadFormat:(ANRestOpsDataFormat)format
+             beforeRequest:(void (^)(void))startingBlock
+              onCompletion:(ANRestOpsCompletionHandler)completionBlock;
 
 @end

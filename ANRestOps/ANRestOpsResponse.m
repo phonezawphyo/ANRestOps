@@ -39,11 +39,6 @@
     return self.urlResponse.allHeaderFields;
 }
 
-- (NSString *)status
-{
-    return [NSHTTPURLResponse localizedStringForStatusCode:[self statusCode]];
-}
-
 - (NSUInteger)statusCode
 {
     return self.urlResponse.statusCode;
@@ -63,4 +58,21 @@
 {
     return [NSString stringWithUTF8String:[self.data bytes]];
 }
+
+- (NSDictionary *)dataAsDictionary
+{
+    NSError *error = nil;
+    NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:self.data options:0 error:&error];
+    
+    if (!error)
+    {
+        return dataDictionary;
+    }
+    else
+    {
+        NSLog(@"The following error occured during JSON serialisation: %@", error);
+        return nil;
+    }
+}
+
 @end

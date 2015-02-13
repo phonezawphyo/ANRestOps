@@ -17,11 +17,10 @@
                             data:(NSData *)data
                            error:(NSError *)error;
 - (NSString *)url;
-- (NSString *)status;
 - (NSUInteger)statusCode;
 - (NSString *)contentType;
 - (NSString *)dataAsString;
+- (NSDictionary *)dataAsDictionary;
 - (NSDictionary *)allHttpHeaders;
-
 
 @end
