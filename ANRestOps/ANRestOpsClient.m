@@ -31,10 +31,11 @@
 + (instancetype)sharedClient
 {
     static ANRestOpsClient *client = nil;
-    if (!client)
-    {
-        client = [[ANRestOpsClient alloc] initLocal];
-    }
+    static dispatch_once_t onceToken;
+
+    dispatch_once(&onceToken, ^{
+        client = [[self alloc] initLocal];
+    });
     return client;
 }
 

@@ -189,7 +189,7 @@ typedef enum
 + (ANRestOpsResponse *)delete:(NSString *)urlString payload:(NSString *)payload
 {
     
-    NSURLRequest *request = [ANRestOps requestWithMethod:PUT withURL:urlString payload:payload];
+    NSURLRequest *request = [ANRestOps requestWithMethod:DELETE withURL:urlString payload:payload];
     ANRestOpsResponse *response = [[ANRestOpsClient sharedClient] sendSynchronousRequest:request];
     
     return response;
@@ -199,7 +199,7 @@ typedef enum
 {
     NSData *httpBody = [ANRestOps getPayloadDataFromDictionary:payload formattedAs:format];
     
-    NSURLRequest *request = [ANRestOps requestWithMethod:PUT withURL:urlString payload:httpBody withContentType:format];
+    NSURLRequest *request = [ANRestOps requestWithMethod:DELETE withURL:urlString payload:httpBody withContentType:format];
     
     ANRestOpsResponse *response = [[ANRestOpsClient sharedClient] sendSynchronousRequest:request];
     

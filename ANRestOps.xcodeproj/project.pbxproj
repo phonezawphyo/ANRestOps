@@ -13,6 +13,7 @@
 		2A328C1D1A6C07A70075F5BB /* ANRestOpsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A328C1A1A6C07A70075F5BB /* ANRestOpsClient.m */; };
 		2A328C1E1A6C07A70075F5BB /* ANRestOpsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A328C1C1A6C07A70075F5BB /* ANRestOpsResponse.m */; };
 		2A328C251A6C0FFB0075F5BB /* ANRestOpsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A328C241A6C0FFB0075F5BB /* ANRestOpsTests.m */; };
+		2A78F0921A8EBA13002622DD /* ANRestOpsResponseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A78F0911A8EBA13002622DD /* ANRestOpsResponseTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2A328C1B1A6C07A70075F5BB /* ANRestOpsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANRestOpsResponse.h; sourceTree = "<group>"; };
 		2A328C1C1A6C07A70075F5BB /* ANRestOpsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANRestOpsResponse.m; sourceTree = "<group>"; };
 		2A328C241A6C0FFB0075F5BB /* ANRestOpsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANRestOpsTests.m; sourceTree = "<group>"; };
+		2A78F0911A8EBA13002622DD /* ANRestOpsResponseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANRestOpsResponseTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				2A328C0F1A6C074C0075F5BB /* Supporting Files */,
 				2A328C241A6C0FFB0075F5BB /* ANRestOpsTests.m */,
+				2A78F0911A8EBA13002622DD /* ANRestOpsResponseTest.m */,
 			);
 			path = ANRestOpsTests;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A78F0921A8EBA13002622DD /* ANRestOpsResponseTest.m in Sources */,
 				2A328C251A6C0FFB0075F5BB /* ANRestOpsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
