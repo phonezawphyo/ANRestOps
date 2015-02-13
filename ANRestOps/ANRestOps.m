@@ -8,9 +8,20 @@
 
 #import "ANRestOps.h"
 
+@interface ANRestOps()
+
+typedef enum
+{
+    POST,
+    PUT,
+    DELETE
+} ANRestOpsHttpMethods;
+
+@end
+
 @implementation ANRestOps
 
-#pragma mark - Synchronous Get and Batch Get
+#pragma mark - Synchronous Get 
 
 + (ANRestOpsResponse *)get:(NSString *)urlString
 {
@@ -60,12 +71,12 @@
     [ANRestOps getInBackground:urlString beforeRequest:startingBlock onCompletion:completionBlock];
 }
 
-#pragma mark - Synchronous Post and Batch Post
+#pragma mark - Synchronous Post
 
 + (ANRestOpsResponse *)post:(NSString *)urlString payload:(NSString *)payload
 {
 
-    NSURLRequest *request = [ANRestOps postRequestWithURL:urlString payload:payload isPayloadString:YES];
+    NSURLRequest *request = [ANRestOps requestWithMethod:POST withURL:urlString payload:payload];
     ANRestOpsResponse *response = [[ANRestOpsClient sharedClient] sendSynchronousRequest:request];
     
     return response;
@@ -75,7 +86,7 @@
 {
     NSData *httpBody = [ANRestOps getPayloadDataFromDictionary:payload formattedAs:format];
     
-    NSURLRequest *request = [ANRestOps postRequestWithURL:urlString payload:httpBody isPayloadString:NO withContentType:format];
+    NSURLRequest *request = [ANRestOps requestWithMethod:POST withURL:urlString payload:httpBody withContentType:format];
     
     ANRestOpsResponse *response = [[ANRestOpsClient sharedClient] sendSynchronousRequest:request];
     
@@ -94,7 +105,7 @@
         startingBlock();
     }
     
-    NSURLRequest *request = [ANRestOps postRequestWithURL:urlString payload:payload isPayloadString:YES];
+    NSURLRequest *request = [ANRestOps requestWithMethod:POST withURL:urlString payload:payload];
     [[ANRestOpsClient sharedClient] sendAsynchronousRequest:request withCompletionHandler:completionBlock];
 }
 
@@ -111,7 +122,120 @@
     
     NSData *httpBody = [ANRestOps getPayloadDataFromDictionary:payload formattedAs:format];
     
-    NSURLRequest *request = [ANRestOps postRequestWithURL:urlString payload:httpBody isPayloadString:NO withContentType:format];
+    NSURLRequest *request = [ANRestOps requestWithMethod:POST withURL:urlString payload:httpBody withContentType:format];
+    
+    [[ANRestOpsClient sharedClient] sendAsynchronousRequest:request withCompletionHandler:completionBlock];
+}
+
+#pragma mark - Synchronous Put
+
++ (ANRestOpsResponse *)put:(NSString *)urlString payload:(NSString *)payload
+{
+    
+    NSURLRequest *request = [ANRestOps requestWithMethod:PUT withURL:urlString payload:payload];
+    ANRestOpsResponse *response = [[ANRestOpsClient sharedClient] sendSynchronousRequest:request];
+    
+    return response;
+}
+
++ (ANRestOpsResponse *)put:(NSString *)urlString payload:(NSDictionary *)payload payloadFormat:(ANRestOpsDataFormat)format
+{
+    NSData *httpBody = [ANRestOps getPayloadDataFromDictionary:payload formattedAs:format];
+    
+    NSURLRequest *request = [ANRestOps requestWithMethod:PUT withURL:urlString payload:httpBody withContentType:format];
+    
+    ANRestOpsResponse *response = [[ANRestOpsClient sharedClient] sendSynchronousRequest:request];
+    
+    return response;
+}
+
+#pragma mark - Asynchronous Put
+
++ (void)putInBackground:(NSString *)urlString
+                 payload:(NSString *)payload
+           beforeRequest:(void (^)(void))startingBlock
+            onCompletion:(ANRestOpsCompletionHandler)completionBlock
+{
+    if (startingBlock)
+    {
+        startingBlock();
+    }
+    
+    NSURLRequest *request = [ANRestOps requestWithMethod:PUT withURL:urlString payload:payload];
+    [[ANRestOpsClient sharedClient] sendAsynchronousRequest:request withCompletionHandler:completionBlock];
+}
+
++ (void)putInBackground:(NSString *)urlString
+                 payload:(NSDictionary *)payload
+           payloadFormat:(ANRestOpsDataFormat)format
+           beforeRequest:(void (^)(void))startingBlock
+            onCompletion:(ANRestOpsCompletionHandler)completionBlock
+{
+    if (startingBlock)
+    {
+        startingBlock();
+    }
+    
+    NSData *httpBody = [ANRestOps getPayloadDataFromDictionary:payload formattedAs:format];
+    
+    NSURLRequest *request = [ANRestOps requestWithMethod:PUT withURL:urlString payload:httpBody withContentType:format];
+    
+    [[ANRestOpsClient sharedClient] sendAsynchronousRequest:request withCompletionHandler:completionBlock];
+}
+
+
+#pragma mark - Synchronous Delete
+
++ (ANRestOpsResponse *)delete:(NSString *)urlString payload:(NSString *)payload
+{
+    
+    NSURLRequest *request = [ANRestOps requestWithMethod:PUT withURL:urlString payload:payload];
+    ANRestOpsResponse *response = [[ANRestOpsClient sharedClient] sendSynchronousRequest:request];
+    
+    return response;
+}
+
++ (ANRestOpsResponse *)delete:(NSString *)urlString payload:(NSDictionary *)payload payloadFormat:(ANRestOpsDataFormat)format
+{
+    NSData *httpBody = [ANRestOps getPayloadDataFromDictionary:payload formattedAs:format];
+    
+    NSURLRequest *request = [ANRestOps requestWithMethod:PUT withURL:urlString payload:httpBody withContentType:format];
+    
+    ANRestOpsResponse *response = [[ANRestOpsClient sharedClient] sendSynchronousRequest:request];
+    
+    return response;
+}
+
+#pragma mark - Asynchronous Delete
+
++ (void)deleteInBackground:(NSString *)urlString
+                payload:(NSString *)payload
+          beforeRequest:(void (^)(void))startingBlock
+           onCompletion:(ANRestOpsCompletionHandler)completionBlock
+{
+    if (startingBlock)
+    {
+        startingBlock();
+    }
+    
+    NSURLRequest *request = [ANRestOps requestWithMethod:DELETE withURL:urlString payload:payload];
+    [[ANRestOpsClient sharedClient] sendAsynchronousRequest:request withCompletionHandler:completionBlock];
+}
+
++ (void)deleteInBackground:(NSString *)urlString
+                payload:(NSDictionary *)payload
+          payloadFormat:(ANRestOpsDataFormat)format
+          beforeRequest:(void (^)(void))startingBlock
+           onCompletion:(ANRestOpsCompletionHandler)completionBlock
+{
+    if (startingBlock)
+    {
+        startingBlock();
+    }
+    
+    NSData *httpBody = [ANRestOps getPayloadDataFromDictionary:payload formattedAs:format];
+    
+    NSURLRequest *request = [ANRestOps requestWithMethod:DELETE withURL:urlString payload:httpBody withContentType:format];
     
     [[ANRestOpsClient sharedClient] sendAsynchronousRequest:request withCompletionHandler:completionBlock];
 }
@@ -187,16 +311,29 @@
     return [ANRestOps setUpDefaultRequestValuesWithURL:urlString];
 }
 
-+ (NSURLRequest *)postRequestWithURL:(NSString *)urlString payload:(id)payload isPayloadString:(BOOL)isString
++ (NSURLRequest *)requestWithMethod:(ANRestOpsHttpMethods)method withURL:(NSString *)urlString payload:(id)payload
 {
     NSMutableURLRequest *request = [[ANRestOps setUpDefaultRequestValuesWithURL:urlString] mutableCopy];
-    [request setHTTPMethod:@"POST"];
+    switch (method)
+    {
+        case POST:
+            [request setHTTPMethod:@"POST"];
+            break;
+        case PUT:
+            [request setHTTPMethod:@"PUT"];
+            break;
+        case DELETE:
+            [request setHTTPMethod:@"DELETE"];
+            break;
+    }
+    
     [request setValue:@"text/plain" forHTTPHeaderField:@"Content-Type"];
-    if (isString)
+    
+    if ([payload isKindOfClass:[NSString class]])
     {
         [request setHTTPBody:[payload dataUsingEncoding:NSUTF8StringEncoding]];
     }
-    else
+    else if (payload)
     {
         [request setHTTPBody:payload];
     }
@@ -204,9 +341,9 @@
     return request;
 }
 
-+ (NSURLRequest *)postRequestWithURL:(NSString *)urlString payload:(id)payload isPayloadString:(BOOL)isString withContentType:(ANRestOpsDataFormat)format
++ (NSURLRequest *)requestWithMethod:(ANRestOpsHttpMethods)method withURL:(NSString *)urlString payload:(id)payload  withContentType:(ANRestOpsDataFormat)format
 {
-    NSMutableURLRequest *request = [[ANRestOps postRequestWithURL:urlString payload:payload isPayloadString:isString] mutableCopy];
+    NSMutableURLRequest *request = [[ANRestOps requestWithMethod:method withURL:urlString payload:payload] mutableCopy];
     
     if (format == ANRestOpsJSONFormat)
     {
