@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0712C828-0203-4CAB-81B5-7A54693571BB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ANRestOps</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FAC875FF77F0AC7CE6B302957A634C7F281C1336</key>
+		<string>https://github.com/ayushn21/ANRestOps.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ANRestOps.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FAC875FF77F0AC7CE6B302957A634C7F281C1336</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ayushn21/ANRestOps.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FAC875FF77F0AC7CE6B302957A634C7F281C1336</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FAC875FF77F0AC7CE6B302957A634C7F281C1336</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ANRestOps</string>
+		</dict>
+	</array>
+</dict>
+</plist>
