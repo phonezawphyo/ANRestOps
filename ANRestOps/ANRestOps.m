@@ -33,33 +33,6 @@
     return response;
 }
 
-+ (NSDictionary *)batchGet:(NSArray *)urls
-{
-    NSMutableDictionary *responses = [NSMutableDictionary new];
-    
-    for (NSString *urlString in urls)
-    {
-        [responses setObject:[ANRestOps get:urlString] forKey:urlString];
-    }
-    
-    return responses;
-}
-
-+ (NSDictionary *)batchGet:(NSArray *)urls parameters:(NSDictionary *)parameters
-{
-    NSString *parametersString = [ANRestOps getFormFormattedParametersFromDictionary:parameters];
-    NSMutableDictionary *responses = [NSMutableDictionary new];
-    
-    for (NSString *urlString in urls)
-    {
-        NSString *urlStringWithParams = [urlString stringByAppendingString:@"?"];
-        urlStringWithParams = [urlStringWithParams stringByAppendingString:parametersString];
-        
-        [responses setObject:[ANRestOps get:urlStringWithParams] forKey:urlString];
-    }
-    
-    return responses;
-}
 
 #pragma mark - Asynchronous Get
 
@@ -107,33 +80,6 @@
     ANRestOpsResponse *response = [[ANRestOpsClient sharedClient] sendSynchronousRequest:request];
     
     return response;
-}
-
-+ (NSDictionary *)batchPost:(NSArray *)urls
-                    payload:(NSString *)payload
-{
-    NSMutableDictionary *responses = [NSMutableDictionary new];
-    
-    for (NSString *urlString in urls)
-    {
-        [responses setObject:[ANRestOps post:urlString payload:payload] forKey:urlString];
-    }
-    
-    return responses;
-}
-
-+ (NSDictionary *)batchPost:(NSArray *)urls
-                    payload:(NSDictionary *)payload
-              payloadFormat:(ANRestOpsDataFormat)format
-{
-    NSMutableDictionary *responses = [NSMutableDictionary new];
-    
-    for (NSString *urlString in urls)
-    {
-        [responses setObject:[ANRestOps post:urlString payload:payload payloadFormat:format] forKey:urlString];
-    }
-    
-    return responses;
 }
 
 #pragma mark - Asynchronous Post

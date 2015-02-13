@@ -22,9 +22,6 @@ typedef NS_ENUM(NSUInteger, ANRestOpsDataFormat)
 + (ANRestOpsResponse *)get:(NSString *)urlString;
 + (ANRestOpsResponse *)get:(NSString *)urlString withParameters:(NSDictionary *)parameters;
 
-+ (NSDictionary *)batchGet:(NSArray *)urls;
-+ (NSDictionary *)batchGet:(NSArray *)urls parameters:(NSDictionary *)parameters;
-
 
 + (void)getInBackground:(NSString *)urlString
           beforeRequest:(void (^)(void))startingBlock
@@ -38,14 +35,6 @@ typedef NS_ENUM(NSUInteger, ANRestOpsDataFormat)
 
 + (ANRestOpsResponse *)post:(NSString *)urlString payload:(NSString *)payload;
 + (ANRestOpsResponse *)post:(NSString *)urlString payload:(NSDictionary *)payload payloadFormat:(ANRestOpsDataFormat)format;
-
-+ (NSDictionary *)batchPost:(NSArray *)urls
-                    payload:(NSString *)payload;
-
-+ (NSDictionary *)batchPost:(NSArray *)urls
-                    payload:(NSDictionary *)payload
-              payloadFormat:(ANRestOpsDataFormat)format;
-
 
 + (void)postInBackground:(NSString *)urlString
                  payload:(NSString *)payload
