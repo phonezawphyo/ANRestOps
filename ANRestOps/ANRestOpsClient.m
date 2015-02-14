@@ -7,6 +7,7 @@
 //
 
 #import "ANRestOpsClient.h"
+#import <UIKit/UIKit.h>
 
 @interface ANRestOpsClient()
 
@@ -58,7 +59,10 @@
 {
     NSURLResponse *URLresponse = nil;
     NSError *error = nil;
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&URLresponse error:&error];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     
     ANRestOpsResponse *response = [[ANRestOpsResponse alloc] initWithResponse:URLresponse data:data error:error];
     
@@ -67,6 +71,7 @@
 
 - (void)sendAsynchronousRequest:(NSURLRequest *)request withCompletionHandler:(ANRestOpsCompletionHandler)completionBlock
 {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:self.queue
                            completionHandler:^(NSURLResponse *URLresponse, NSData *data, NSError *connectionError) {
@@ -74,6 +79,7 @@
                                                                                                     data:data
                                                                                                    error:connectionError];
                                dispatch_async(dispatch_get_main_queue(), ^{
+                                   [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
                                    completionBlock(response);
                                });
     }];
