@@ -2,7 +2,9 @@ Pod::Spec.new do |s|
   s.name              = "ANRestOps"
   s.version           = "1.0.2"
   s.summary           = "ANRestOps is a simple lightweight library to make REST calls"
-  s.description       = <<-DESC ANRestOps is a simple library based on the NSURLConnection and NSOperationQueue APIs. It abstracts away most of the complexity to set up these objects and allows you to make simple REST calls in a single line of code. DESC
+  s.description       = <<-DESC 
+  ANRestOps is a simple library based on the NSURLConnection and NSOperationQueue APIs. It abstracts away most of the complexity to set up these objects and allows you to make simple REST calls in a single line of code. 
+  DESC
   s.homepage          = "https://github.com/ayushn21/ANRestOps"
   s.license           = 'MIT'
   s.author            = { "Ayush Newatia" => "ayush.newatia@icloud.com" }
