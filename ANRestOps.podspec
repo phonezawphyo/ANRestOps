@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
                          DESC
   s.homepage          = "https://github.com/ayushn21/ANRestOps"
   s.license           = 'MIT'
-  s.author            = { "Ayush Newatia" => "ayushnewatia@gmail.com" }
+  s.author            = { "Ayush Newatia" => "ayush.newatia@icloud.com" }
   s.source            = { :git => "https://github.com/ayushn21/ANRestOps.git", :tag => s.version.to_s }
   s.social_media_url  = 'https://twitter.com/ayushn21'
   s.platform          = :ios, '7.0'
