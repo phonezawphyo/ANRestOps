@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ayushn21/ANRestOps.svg?branch=develop)](https://travis-ci.org/ayushn21/ANRestOps)
+
 ## Description
 
 ANRestOps is a simple library based on the NSURLConnection and NSOperationQueue APIs. 
