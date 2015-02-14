@@ -15,6 +15,9 @@ typedef void(^ANRestOpsCompletionHandler)(ANRestOpsResponse *);
 
 + (instancetype)sharedClient;
 
+/**
+    The maximum number of concurrents requests that ca be executed by the `NSOperationQueue`. Default is 1 and it is recommended to leave it unchanged.
+*/
 - (void)setMaxConcurrentRequests:(NSUInteger)numberOfRequests;
 
 - (ANRestOpsResponse *)sendSynchronousRequest:(NSURLRequest *)request;

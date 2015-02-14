@@ -5,7 +5,7 @@ It abstracts away most of the complexity to set up these objects and allows you 
 
 ## Usage
 
-ANRestOps currently has GET and POST methods. PUT, PATCH and DELETE are coming as soon as I can be bothered to write them. The method call will return an instance of `ANRestOpsResponse`. This class has a number of helper methods to extract data from the response. Refer to `ANRestOpsResponse.h`.
+ANRestOps currently has GET, POST, Put and DELETE methods. The method call will return an instance of `ANRestOpsResponse`. This class has a number of helper methods to extract data from the response. Refer to `ANRestOpsResponse.h`.
 
 A `GET` request can be executed like the below line:
 
@@ -70,9 +70,13 @@ it, simply add the following line to your Podfile:
 
     pod "ANRestOps"
 
+## Documentation
+
+[Docs are available on CocoaDocs](http://cocoadocs.org/docsets/ANRestOps/)
+
 ## Author
 
-Ayush Newatia, ayushnewatia@gmail.com
+Ayush Newatia, ayush.newatia@icloud.com
 
 ## License
 
