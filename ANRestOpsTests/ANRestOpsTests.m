@@ -69,10 +69,9 @@
     XCTAssertEqual([response statusCode], 200, @"Status is 200 OK");
     XCTAssertNotNil([response data], @"Data returned is not nil");
     
-    XCTAssertTrue([[response dataAsString] containsString:@"Key1"], @"The response contains the parameter key");
-    XCTAssertTrue([[response dataAsString] containsString:@"Value1"], @"The response contains the parameter value");
-    XCTAssertTrue([[response dataAsString] containsString:@"Key2"], @"The response contains the parameter key");
-    XCTAssertTrue([[response dataAsString] containsString:@"Value2"], @"The response contains the parameter value");
+    NSLog(@"Response: %@", [response dataAsString]);
+    
+    XCTAssertTrue([[response dataAsDictionary][@"args"] count] == 2, @"The response contains the passed arguments");
 }
 
 - (void)testAsyncGetRequestWithParams
