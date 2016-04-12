@@ -79,7 +79,7 @@
                                                                                                     data:data
                                                                                                    error:connectionError];
                                dispatch_async(dispatch_get_main_queue(), ^{
-                                   [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+                                   [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
                                    completionBlock(response);
                                });
     }];

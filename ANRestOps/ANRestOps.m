@@ -21,6 +21,12 @@ typedef enum
 
 @implementation ANRestOps
 
+NSString* userAgent = @"ANRestOps/1.0";
+
++(void)setUserAgent:(NSString *)urlString {
+    userAgent = urlString;
+}
+
 #pragma mark - Synchronous Get 
 
 + (ANRestOpsResponse *)get:(NSString *)urlString
@@ -301,7 +307,7 @@ typedef enum
 {
     NSURL *url = [NSURL URLWithString:urlString];
     NSMutableURLRequest *request = [[NSURLRequest requestWithURL:url] mutableCopy];
-    [request addValue:@"ANRestOps/1.0" forHTTPHeaderField:@"User-Agent"];
+    [request addValue:userAgent forHTTPHeaderField:@"User-Agent"];
     
     return request;
 }

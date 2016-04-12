@@ -12,11 +12,13 @@
 
 @interface ANRestOps : NSObject
 
-typedef enum
+typedef NS_ENUM(NSUInteger, ANRestOpsDataFormat)
 {
     ANRestOpsJSONFormat,
     ANRestOpsFormFormat
-} ANRestOpsDataFormat;
+} ;
+
++ (void)setUserAgent:(NSString *)urlString;
 
 /**
     Send a synchronous GET request.
